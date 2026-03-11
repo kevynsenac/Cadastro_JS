@@ -19,6 +19,3 @@ O foco principal é o aprendizado da integração entre as tecnologias web funda
 1.  **`index.html`**: Contém a marcação dos campos de entrada e botões.
 2.  **`style.css`**: Define toda a identidade visual e o posicionamento dos elementos.
 3.  **`script.js`**: Gerencia o comportamento do formulário após o preenchimento.
-
----
-**Dica de estudo:** Experimente alterar os valores de `border-radius` ou `background-color` no arquivo CSS para ver como a aparência do formulário muda instantaneamente no navegador.
