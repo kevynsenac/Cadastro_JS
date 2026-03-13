@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>Formulario de Cadastro</title>
+  </head>
+
+  <body>
+    <main class="container">
+      <form id="form-cadastro">
+        <h1>Faça seu cadastro</h1>
+
+        <div class="input-group">
+          <label for="input-nome">Digite seu nome</label>
+          <input
+            id="input-nome"
+            type="text"
+            placeholder="Seu nome aqui"
+            required
+          />
+        </div>
+
+        <div class="input-group">
+          <label for="input-email">Digite seu e-mail</label>
+          <input
+            id="input-email"
+            type="email"
+            placeholder="email@exemplo.com"
+            required
+          />
+        </div>
+
+        <div class="input-group">
+          <label for="input-senha">Crie uma senha</label>
+          <input
+            id="input-senha"
+            type="password"
+            placeholder="••••••••"
+            required
+          />
+        </div>
+
+        <button id="btn-cadastrar" type="submit">Finalizar Cadastro</button>
+
+        <a href="cadastrados.html" style="text-decoration: none">
+          <button id="btn-ver-cadastrados" type="button">
+            Ver Usuários Cadastrados
+          </button>
+        </a>
+      </form>
+    </main>
+  </body>
+</html>
+

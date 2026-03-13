@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Usuários Cadastrados</title>
+  </head>
+
+  <body>
+    <main class="container" style="max-width: 600px">
+      <h1>Usuários na Base</h1>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>E-mail</th>
+            <th>Senha</th>
+          </tr>
+        </thead>
+        <tbody id="tabela-corpo"></tbody>
+      </table>
+
+      <a href="formulario.html" style="text-decoration: none">
+        <button id="btn-ver-cadastrados" type="button">← Voltar</button>
+      </a>
+    </main>
+
+    <script>
+      const corpoTabela = document.getElementById("tabela-corpo");
+      const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+
+      if (usuarios.length === 0) {
+        corpoTabela.innerHTML =
+          "<tr><td colspan='3' style='text-align:center'>Nenhum cadastro encontrado.</td></tr>";
+      } else {
+        usuarios.forEach((user) => {
+          const linha = `
+                    <tr>
+                        <td>${user.nome}</td>
+                        <td>${user.email}</td>
+                        <td>${user.senha}</td>
+                    </tr>
+                `;
+          corpoTabela.innerHTML += linha;
+        });
+      }
+    </script>
+  </body>
+</html>
+
